@@ -1,0 +1,22 @@
+{%extends  'base.html'%}
+{%block body_block%}
+
+
+<form action="" method="post">
+<!--               #when clicking post we need post,settings middleware check cgs and also pass token while using method post(csr)&ndash;&gt;-->
+               {%csrf_token%}
+           {{form.as_p}}  <!-- (#ul,tableetc in form  here paragragh)-->
+
+
+
+
+                <input type="submit">
+
+            </form>
+{%for num in result%}
+<div>
+    {{num}}
+</div>
+{%endfor%}
+{%endblock%}
+
